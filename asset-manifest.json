@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/TextUtils-Darshan/static/css/main.953636d2.css",
+    "main.js": "/TextUtils-Darshan/static/js/main.64f03f0b.js",
+    "static/js/787.774f6ce0.chunk.js": "/TextUtils-Darshan/static/js/787.774f6ce0.chunk.js",
+    "index.html": "/TextUtils-Darshan/index.html",
+    "main.953636d2.css.map": "/TextUtils-Darshan/static/css/main.953636d2.css.map",
+    "main.64f03f0b.js.map": "/TextUtils-Darshan/static/js/main.64f03f0b.js.map",
+    "787.774f6ce0.chunk.js.map": "/TextUtils-Darshan/static/js/787.774f6ce0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.953636d2.css",
+    "static/js/main.64f03f0b.js"
+  ]
+}
