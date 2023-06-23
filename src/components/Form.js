@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 
 export default function Form(props) {
   
+  
   const [text, setText] = useState('');
 
   //state
@@ -54,6 +55,13 @@ export default function Form(props) {
     let newText = "Copy";
     setCopy(newText);
   }
+  // remove space
+
+  const handleExtraSpaces=()=>{
+    let newText=text.split(/[ ]+/)
+    setText(newText.join(""))
+    props.showAlert(" White spaces Removed","success")
+  }
 
   // space word count bug fix
   return (
@@ -62,12 +70,13 @@ export default function Form(props) {
     <h5>{props.heading}</h5>
     <div className="mb-3">
      <label htmlFor="exampleFormControlTextarea1" className="form-label"></label>
-     <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8"></textarea>
+     <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8" placeholder='Enter your text here'></textarea>
     </div>
      <button className="btn btn-primary mx-1 my-1" disabled={text.length===0}  onClick={handleUpClick}>Convert to Uppercase</button>
      <button className="btn btn-primary mx-1 my-1" disabled={text.length===0}  onClick={handleLowClick}>Convert to Lowercase</button>
-     <button className="btn btn-primary mx-1 my-1" disabled={text.length===0}  onClick={handleClearClick}>Clear Text</button>
+     <button className="btn btn-primary mx-1 my-1" disabled={text.length===0}  onClick={handleExtraSpaces}>Remove White Spaces</button>
      <button className="btn btn-primary mx-1 my-1" disabled={text.length===0}  onClick={handleCopy}>{Copy}</button>
+     <button className="btn btn-primary mx-1 my-1" disabled={text.length===0}  onClick={handleClearClick}>Clear Text</button>
      
   </div>
 
